@@ -23,17 +23,17 @@ fn not_found() -> JSON<Value> {
 }
 
 fn rocket() -> Rocket {
-	let mut opts = mysql::OptsBuilder::new();
-	opts.db_name(Some("pwfantasy"));
-	opts.user(Some(env!("PWFDB_USER")));
-	opts.pass(Some(env!("PWFDB_PASS")));
+    let mut opts = mysql::OptsBuilder::new();
+    opts.db_name(Some("pwfantasy"));
+    opts.user(Some(env!("PWFDB_USER")));
+    opts.pass(Some(env!("PWFDB_PASS")));
 
-	let pool = mysql::Pool::new(opts).unwrap();
+    let pool = mysql::Pool::new(opts).unwrap();
 
-	rocket::ignite()
-		.manage(pool)
-    	.mount("/superstar", routes![superstar::create, superstar::retrieve])
-    	.catch(errors![not_found])
+    rocket::ignite()
+        .manage(pool)
+        .mount("/superstar", routes![superstar::create, superstar::retrieve])
+        .catch(errors![not_found])
 }
 
 fn main() {

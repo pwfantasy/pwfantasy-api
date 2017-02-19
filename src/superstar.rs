@@ -10,7 +10,7 @@ use talent;
 
 #[put("/<slug>", format = "application/json", data = "<superstar>")]
 pub fn create(pool: State<mysql::Pool>, slug: String, superstar: JSON<talent::Talent>) -> JSON<Value> {
-	// need to require admin privledges
+    // need to require admin privledges
     JSON(json!({ "status": "ok" }))
 }
 
@@ -18,7 +18,7 @@ pub fn create(pool: State<mysql::Pool>, slug: String, superstar: JSON<talent::Ta
 #[allow(unmounted_route)]
 pub fn retrieve(pool: State<mysql::Pool>, slug: String) -> Option<JSON<Value>> {
 
-	let talents: Vec<talent::Talent> = talent::retrieve_by_slug(pool, slug);
+    let talents: Vec<talent::Talent> = talent::retrieve_by_slug(pool, slug);
 
     Some(JSON(json!(talents)))
 
