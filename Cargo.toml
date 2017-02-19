@@ -1,0 +1,17 @@
+[package]
+name = "pwfantasy-api"
+version = "0.0.1"
+authors = ["Sean Wragg <seanwragg@gmail.com>"]
+
+[dependencies]
+rocket = "0.2.0"
+rocket_codegen = "0.2.0"
+serde = "0.9"
+serde_json = "0.9"
+serde_derive = "0.9"
+mysql = "*"
+
+[dependencies.rocket_contrib]
+version = "0.2.0"
+default-features = false
+features = ["json"]
