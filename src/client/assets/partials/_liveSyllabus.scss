@@ -1,0 +1,138 @@
+#live-syllabus {
+
+    .width-sizer{
+        width:980px;
+        margin:0 auto;
+    }
+
+    #month-bar{
+        background-color: #f1efef;
+
+        li {
+            font-size: 1.25em;
+            color:#d0112b;
+            font-weight: 400;
+            padding: .5em;
+        }
+
+        .class-month {
+            cursor:pointer;
+
+            &.active-month{
+                background-color: #ffffff;
+            }
+
+        }
+
+
+
+
+        .month-count{
+            padding:0px 2px;
+            border-radius: 5px;
+            border: 1px solid #d8d8d8;
+            color: #d8d8d8;
+            font-size: .6em;
+            margin: .9em 0 0 .5em;
+
+            &-active{
+                padding:0px 2px;
+                border-radius: 5px;
+                border: 1px solid #d8d8d8;
+                color: #d8d8d8;
+                font-size: .6em;
+                    margin: .9em 0 0 .5em;
+                border: 1px solid #d0112b;
+                color: #d0112b;
+
+            }
+        }
+
+        ul{
+            list-style-type: none;
+            padding:0;
+            margin: 0;
+        }
+    }
+
+
+
+    #week-buttons{
+
+        .button-week-num{
+            font-size: 1.25em;
+        }
+
+        .button-week-range{
+            padding-left: 1em;
+        }
+
+        .week-button {
+            cursor: pointer;
+            border: 2px solid #c4c3c4;
+            border-radius: 5%;
+            padding: .5em;
+            margin: 1em 0;
+
+            &.active-week {
+                color:white;
+                background-color: #ce1731;
+                border:2px solid #ce1731;
+                position: relative;
+
+            }
+            &.active-week::after {
+                content: '';
+                  position: absolute;
+                  left: 0;
+                  top:43px;
+                  color: #ce1731;
+                  display: inline-block;
+                  height: 1em;
+                  width: 100%;
+                  border-bottom: 3px solid;
+                  z-index: 50;
+            }
+        }
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    #week-info{
+        padding: 1em 0;
+
+        h3{
+            margin-top:0;
+            font-weight: 400;
+            color:#d0112b;
+        }
+    }
+
+    #session-headers {
+        margin: 15px 0 -10px 0;
+        padding: 0 10px;
+        small {
+            font-size: 1em;
+            padding:0;
+        }
+
+        #date-info-column-header{
+            margin-left: -5px;
+        }
+
+        #left-icons-column-header{
+            width:3em;
+            margin-right:5px;
+        }
+
+        #attendance-icon-column-header{
+            width:5em;
+            padding:0;
+            margin-left: -13px;
+        }
+    }
+
+
+}

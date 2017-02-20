@@ -1,0 +1,14 @@
+{
+    "log": {
+        "level": "dev"
+    },
+
+    "webapi": {
+        "stubs": true,
+        "proxy": {
+            "target": "http://localhost:8000"
+        }
+    },
+
+    "compression": false
+}

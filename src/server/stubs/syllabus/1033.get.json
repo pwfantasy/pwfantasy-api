@@ -1,0 +1,747 @@
+[{
+  "unit": {
+    "id": 2577,
+    "title": "Week 1",
+    "description": "Introduction to Web Development, HTML and CSS"
+  },
+  "entries": [{
+    "id": 3497,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 1,
+    "title": "Making and Saving Documents",
+    "description": "Today's main topics are Git and HTML/CSS.\n\nThe session discuss git and GitHub workflows; valid HTML; and targeting HTML with CSS.",
+    "startDate": "2016-09-01T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 4102,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 1,
+    "title": "Setting Expectations for a Successful Journey",
+    "description": "In today's session, students will review the logistical details of the Bootcampâ€”including when and how to contact their Studenet Success Managers, and eligibiity requirements for career services. \n\nStudents will also begin to tinker with the command line and, time allowing, HTML.",
+    "startDate": "2016-09-01T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 4432,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 1,
+    "title": "Visual Architecture with CSS: Positioning Properties In-Depth",
+    "description": "",
+    "startDate": "2016-09-01T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 2632,
+    "title": "Week 10",
+    "description": "Introduction to Node"
+  },
+  "entries": [{
+    "id": 2672,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 0,
+    "title": "Introduction to Node",
+    "description": "Today's class introduces the ideas behind servers; clients; and the request-response cycle.\n\nStudents will also use Node to write applications that run outside of the browser.",
+    "startDate": "2016-11-03T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2287,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 0,
+    "title": "Intermediate Node",
+    "description": "In today's session, students read and write to the file system using Node's built-in fs package.\n\nIn addition, they learn how to make HTTP GET requests with the request NPM package.",
+    "startDate": "2016-11-03T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3112,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 0,
+    "title": "Introduction to the NPM Ecosystem",
+    "description": "Today's class introduces students to the concept of NPM and package management. \n\nIn particular, it introduces inquirer.js, an NPM package for building command line applications.",
+    "startDate": "2016-11-03T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 2687,
+    "title": "Week 11",
+    "description": "Introduction to OOP in JavaScript"
+  },
+  "entries": [{
+    "id": 3607,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 1,
+    "title": "OOP in Practice",
+    "description": "In today's session, students will build the Weather Admin application.\n\nThe application accepts a user's name and location, and reports the weather in that location. Users can also retrieve a list of all searches users have performed.\n\nStudents will also receive a formal introduction to callbacks.",
+    "startDate": "2016-11-10T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1572,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 1,
+    "title": "Constructor Functions",
+    "description": "Today's class introduces students to JavaScript constructors, and how they can be used to dynamically create objects with similar schemas.",
+    "startDate": "2016-11-10T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1627,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 1,
+    "title": "Constructors and Prototypes",
+    "description": "In today's session, students build upon their knowledge of constructors by using them to store user input.\n\nStudents will also learn to compose constructors to create complex objects out of small components.",
+    "startDate": "2016-11-10T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 2742,
+    "title": "Week 12",
+    "description": "Introduction to MySQL"
+  },
+  "entries": [{
+    "id": 1792,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 2,
+    "title": "Databases with Big Data",
+    "description": "Today's class focuses on using MySQL to handle big data. \n\nIn addition, students should also become proficient in creating and using \"schema.sql\" and \"seeds.sql\" files, while also learning how to import data from.CSV files.",
+    "startDate": "2016-11-17T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2892,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 2,
+    "title": "Introduction to Relational Databases",
+    "description": "In today's session, students will set up MySQL Workbench; learn the basics of relational databases; and learn how to save and retrieve data.",
+    "startDate": "2016-11-17T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3882,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 2,
+    "title": "Schema-like Databases in Node",
+    "description": "In today's session, students will connect their Node applications to a MySQL database to persist user input for a fully functional full stack application.",
+    "startDate": "2016-11-17T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 2797,
+    "title": "Week 13",
+    "description": "Introduction to Express"
+  },
+  "entries": [{
+    "id": 2727,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 3,
+    "title": "Introduction to Node Servers",
+    "description": "In this class we will provide students with a deep conceptual understanding of server-side code and use vanilla Node.js to create basic servers and handle the response/request cycle manually.",
+    "startDate": "2016-11-24T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2122,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 3,
+    "title": "Hot Restaurant Activity",
+    "description": "Today, students will create an Express based web application for handling restaurant reservation requests. \n\nIn the process of building today's assignment, students will reinforce their understanding of Express Servers, Routing, and AJAX for front-end interaction",
+    "startDate": "2016-11-24T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1957,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 3,
+    "title": "Express Yourself",
+    "description": "Today's session covers how to use Express to simplify request handling. \n\nStudents will also learn to respond differently to GET and POST requests sent to the same route.",
+    "startDate": "2016-11-24T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 2852,
+    "title": "Week 14",
+    "description": "Node, Express, and Handlebars"
+  },
+  "entries": [{
+    "id": 1077,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 4,
+    "title": "Abstractions Over SQL",
+    "description": "Today's session introduces students to the basics of Object-Relational Mapping, a system which allows programmers to more easily collect and to manipulate data from databases using reusable methods.",
+    "startDate": "2016-12-01T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1407,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 4,
+    "title": "Client-Server Communications",
+    "description": "In today's session, students will use everything they've learned to build a database-backed application that handles user input.\n\nThey will write a both a front-end, responsible for sending user input to a server, and a back-end, responsible for handling that user input and persisting it to a MySQL database.",
+    "startDate": "2016-12-01T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2562,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 4,
+    "title": "Introduction to Handlebars",
+    "description": "Today's session introduces Handlebars, a templating language which allows students to create dynamically generated web pages with minimal reptition of HTML.",
+    "startDate": "2016-12-01T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 2907,
+    "title": "Week 15",
+    "description": "Sequelize"
+  },
+  "entries": [{
+    "id": 2232,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 5,
+    "title": "Intermediate MySQL",
+    "description": "Today's session covers using the Sequelize ORM to interact with MySQL databases.\n\nThis allows students to avoid the lower-level details of working with MySQL, making for a more robust programming experience.",
+    "startDate": "2016-12-08T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2012,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 5,
+    "title": "Extras and Loose Ends",
+    "description": "In today's session, students will learn how to write belongs-to-many associations, as well as how to write migrations to manage changes to the database.\n\nStudents will also gain exposure to bcrypt and password hashing.",
+    "startDate": "2016-12-08T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 4047,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 5,
+    "title": "Sequelized Associations",
+    "description": "Today's session introduces students to Sequelize's methods for handling join relations.\n\nIn particular, students will learn to write one-to-one and one-to-many relationships, and how to use accessor functions for efficient querying.",
+    "startDate": "2016-12-08T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 2962,
+    "title": "Week 16",
+    "description": "Testing"
+  },
+  "entries": [{
+    "id": 3002,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 6,
+    "title": "Introduction to Software Testing",
+    "description": "Today's lesson will introduce students to the basics of unit testing using Mocha and Chai, and acquaint them with the requirements of their second project.",
+    "startDate": "2016-12-15T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3057,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 6,
+    "title": "Introduction to Test-Driven Development",
+    "description": "In today's class, students will write their tests first, and then their code.\n\nThis helps ensure code is correct and safeguards against regressions in the future.",
+    "startDate": "2016-12-15T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2507,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 6,
+    "title": "Introduction to Functional Testing",
+    "description": "In this class, we will be introducing student to the principles of user stories and functional testing using Nightmare.js.",
+    "startDate": "2016-12-15T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3017,
+    "title": "Week 17",
+    "description": "SEO"
+  },
+  "entries": [{
+    "id": 2177,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 7,
+    "title": "How Google Reads Websites",
+    "description": "Today's session introduces the factors search engines use to determine search rankings.\n\nStudents will learn about the major ranking on-page ranking factors; how backlinks influence search rankings; and the importance of clean navigation schemes.",
+    "startDate": "2016-12-22T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1022,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 7,
+    "title": "\"Content Is King\"",
+    "description": "In today's session, students will learn how a website's content influences its search rankings, as well as how to implement accessibility best practices.",
+    "startDate": "2016-12-22T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 4487,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 7,
+    "title": "Web Performance",
+    "description": "Today's lesson introduces the basics of web performance, including the notion of waterfall charts, and acquaints students with Google Webmaster Tools.",
+    "startDate": "2016-12-22T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3072,
+    "title": "Week 18",
+    "description": "MongoDB"
+  },
+  "entries": [{
+    "id": 3552,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 8,
+    "title": "Masters of MongoDB",
+    "description": "Today's session introduces the concept of the NoSQL database with MongoDB, goes over its pros and cons compared with MySQL, and ultimately details all of the required steps to employ MongoDB in future projects.",
+    "startDate": "2016-12-29T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1462,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 8,
+    "title": "Collecting Data by Crawling the Web",
+    "description": "Today's session introduces students to the concept of web scraping, and then how to store data into a MongoDB database using Node and MongoJS. \n\nBy the end of class, students will combine these two skills with an exercise: scraping sites into MongoDB.",
+    "startDate": "2016-12-29T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1847,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 8,
+    "title": "Defining Relational Schemas with Mongoose",
+    "description": "Today's class introduces students to Mongoose, a node package that lends some more power to MongoDB queries. \n\nWith schemas, custom methods and the ability to create relations in a non-relational database, Mongoose will help make MongoDB even more flexible.",
+    "startDate": "2016-12-29T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3127,
+    "title": "Week 19",
+    "description": "ReactJS"
+  },
+  "entries": [{
+    "id": 2837,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 9,
+    "title": "Introduction to React and Component-Based UI",
+    "description": "Today's class introduces the basic concepts of ReactJS; JSX; and how to build layouts with a component-based mindset.",
+    "startDate": "2017-01-05T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1517,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 9,
+    "title": "Component Relationships, States, and Props",
+    "description": "Today's session introduces the concepts of states and props; parent-child relationships; and lifecycle events. \n\nTowards the tail-end of the class, students will work heavily on an application that integrates React with HTTP requests.",
+    "startDate": "2017-01-05T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 4322,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 9,
+    "title": "Using React in a full stack application",
+    "description": "Today's class teaches students how to integrate their React applications with a Node, Express, and MongoDB back-end.\n\nTowards the end of class, students will gain exposure to the new concepts of ES6.",
+    "startDate": "2017-01-05T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3182,
+    "title": "Week 2",
+    "description": "HTML, CSS, and Bootstrap"
+  },
+  "entries": [{
+    "id": 3992,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 2,
+    "title": "Selector Stew",
+    "description": "",
+    "startDate": "2016-09-08T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 4267,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 2,
+    "title": "The Grid System",
+    "description": "Today's session is focused on introducing students to the concept of grid-based web design and the utilization of Bootstrap for grid-layouts. \n\nTowards the end of the session, we will also be covering mobile-responsive web design using media queries and viewports.",
+    "startDate": "2016-09-08T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3827,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 2,
+    "title": "Publishing Your Websites to Heroku",
+    "description": "Today's session teaches students how to publish their websites to Heroku.",
+    "startDate": "2016-09-08T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3237,
+    "title": "Week 20",
+    "description": "Regionalized Content"
+  },
+  "entries": [{
+    "id": 4377,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 0,
+    "title": "Varies with Market",
+    "description": "",
+    "startDate": "2017-01-12T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3292,
+    "title": "Week 21",
+    "description": "React Native/React Review"
+  },
+  "entries": [{
+    "id": 4542,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 1,
+    "title": "Writing Mobile Applications with React Native",
+    "description": "Today's session introduces React Native. This JavaScript framework allows devs to build mobile applications using a syntax similar to ordinary React. \n\nSome students may choose to focus on review instead. Alternative activities are provided to suit their needs.",
+    "startDate": "2017-01-19T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1682,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 1,
+    "title": "Consuming API Data in React Native",
+    "description": "today's session reviews the React Native principles from 21.1 by creating an mobile app for movie data. This time, we'll build an app that relies on multiple component files, as well as data from an outside sourceâ€”the OMDB API. \n\nOnce again, students will have a choice of working with React Native or participating in a review lecture; those refreshers will focus either on interview questions or a past activity.",
+    "startDate": "2017-01-19T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2067,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 1,
+    "title": "First Steps on Final Projects",
+    "description": "In this lecture, you'll prime your students to conceptualize their final projects. You'll run down the list of expectations and requirements for each of their weekly deliverables.\n\nAside from that, you and the TAs will stick around to make sure each team has solid idea for their project--they should have one by the end of the class.",
+    "startDate": "2017-01-19T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3347,
+    "title": "Week 22",
+    "description": "Computer Science"
+  },
+  "entries": [{
+    "id": 1242,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 2,
+    "title": "Basics of Algorithms",
+    "description": "Today's session introduces the fundamental concept of algorithm development and efficiency. \n\nThe remainder of class is left for work on projects.",
+    "startDate": "2017-01-26T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1297,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 2,
+    "title": "Big O and Data Structures",
+    "description": "Today's lesson will introduce students to the notions of time complexity; Big O analysis; and basic data structures.",
+    "startDate": "2017-01-26T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 4157,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 2,
+    "title": "Sorting Algorithms ",
+    "description": "Today's session introduces students to sorting algorithms. If time and student interest are appropriate, instructors are free to touch on Lodash. \n\nThe the remainder of class is left for work on projects.",
+    "startDate": "2017-01-26T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3402,
+    "title": "Week 23",
+    "description": "Three Languages in Three Days"
+  },
+  "entries": [{
+    "id": 2947,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 3,
+    "title": "Introduction to Ruby/C#",
+    "description": "In today's class, students will learn the basics of Ruby or C# by implementing a command-line application. The choice of language is left to the instructor.\n\nThey will implement the same application in a different language each day of the week.",
+    "startDate": "2017-02-02T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2617,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 3,
+    "title": "Introduction to Java",
+    "description": "In today's class, students will learn the basics of Java by implementing a command-line application.\n\nThey will implement the same application in a different language each day of the week.",
+    "startDate": "2017-02-02T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2782,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 3,
+    "title": "Introduction to Python",
+    "description": "In today's class, students will learn the basics of Python by implementing a command-line application.\n\nThey will implement the same application in a different language each day of the week.",
+    "startDate": "2017-02-02T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3457,
+    "title": "Week 3",
+    "description": "Introduction to JavaScript"
+  },
+  "entries": [{
+    "id": 3167,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 3,
+    "title": "JavaScript Fundamentals, Pt. 1",
+    "description": "Today's session introduces variables; many of JavaScript's built-in data structures; and a handful of common functions.",
+    "startDate": "2016-09-15T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3222,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 3,
+    "title": "JavaScript Fundamentals, Pt. 2",
+    "description": "Today's session discusses students to boolean conditions; control flow; and arrays. \n\nStudents will spend roughly the latter half of class using JavaScript to implement Rock-Paper-Scissors.",
+    "startDate": "2016-09-15T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3277,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 3,
+    "title": "JavaScript Fundamentals, Pt. 3",
+    "description": "Today's session introducse students to the syntax for defining and calling functions.\n\nStudents also learn how to use objects to define associative data.",
+    "startDate": "2016-09-15T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3512,
+    "title": "Week 4",
+    "description": "Introduction to jQuery"
+  },
+  "entries": [{
+    "id": 3442,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 4,
+    "title": "jQuery Calculator",
+    "description": "Today's session takes a closer look at function scope in JavaScript; the this keyword; and jQuery's event-handling mechanisms.\n\nStudents spend the latter half of today's session consolidating their knowledge of JavaScript and jQuery by building a fully functional calculator application.",
+    "startDate": "2016-09-22T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3937,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 4,
+    "title": "Scope and Events",
+    "description": "Today's session introduces introduces scope and additional common features of jQuery.",
+    "startDate": "2016-09-22T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1902,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 4,
+    "title": "DOM Manipulation",
+    "description": "Today's session covers the difference between the DOM and a static HTML document, and introduces common jQuery methods for manipulating it.",
+    "startDate": "2016-09-22T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3567,
+    "title": "Week 5",
+    "description": "JavaScript: Review, Timers, and Debugging"
+  },
+  "entries": [{
+    "id": 4212,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 5,
+    "title": "Technical Interview Preparation",
+    "description": "Today's session introduces students to the technical interview as a whole, as well as important problem solving strategies.\n\nIn particular, students learn the importance of visualizing problems, interacting with their interviewer, and drafting conceptual solutions.",
+    "startDate": "2016-09-29T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3332,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 5,
+    "title": "JavaScript Review",
+    "description": "Today's class is an opportunity for students to review any JavaScript they don't feel confident about. \n\nStudents will spend the majority of class working through activities from previous points in the curriculum.",
+    "startDate": "2016-09-29T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3387,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 5,
+    "title": "jQuery and Asynchronous JavaScript",
+    "description": "Today's session consists of a brief review of jQuery, and then explores the asynchronous nature of JavaScript by way of two useful, common functions: setTimeout and setInterval.",
+    "startDate": "2016-09-29T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3622,
+    "title": "Week 6",
+    "description": "AJAX"
+  },
+  "entries": [{
+    "id": 1132,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 6,
+    "title": "Advanced AJAX",
+    "description": "Today's session takes a closer look at how APIs, JSON, and AJAX work together to enable complex communications between websites.",
+    "startDate": "2016-10-06T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1187,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 6,
+    "title": "APIs and AJAX",
+    "description": "Today's session teaches students how to request information from different websites.\n\nStudents gain a stronger grasp on the concept of APIs; working with JSON; and parsing complex JavaScript objects.  ",
+    "startDate": "2016-10-06T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1737,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 6,
+    "title": "Consuming Live APIs",
+    "description": "In today's session, students apply their knowledge of APIs and AJAX to build a \"real world\" application that fetches and displays articles from the New York Times.",
+    "startDate": "2016-10-06T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3677,
+    "title": "Week 7",
+    "description": "Introduction to Firebase"
+  },
+  "entries": [{
+    "id": 2397,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 7,
+    "title": "Introduction to Client-Side Storage",
+    "description": "Today's class introduces the concept of data persistence, and the difference between server-side and client- side persistence.",
+    "startDate": "2016-10-13T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2452,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 7,
+    "title": "Introduction to Firebase",
+    "description": "Today's session teaches students how to connect to Firebase, and how to wire their application to respond to server-side changes in real time.",
+    "startDate": "2016-10-13T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 1352,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 7,
+    "title": "Building Applications with Firebase",
+    "description": "In today's session, students will get hands-on experience with the intricacies of handling date and time in JavaScript, as well as round out their exposure to the essential Firebase methods.",
+    "startDate": "2016-10-13T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3732,
+    "title": "Week 8",
+    "description": "API Project Week 1"
+  },
+  "entries": [{
+    "id": 3717,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 8,
+    "title": "Project #1 Week #1: All-Class Hackathon",
+    "description": "Students have all of today's session to work on their projects.",
+    "startDate": "2016-10-20T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}, {
+  "unit": {
+    "id": 3787,
+    "title": "Week 9",
+    "description": "API Project Week 2"
+  },
+  "entries": [{
+    "id": 3772,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 9,
+    "title": "Project #1 Week #2: Loose Ends and Whiteboarding",
+    "description": "In today's session, students will \"warm up\" by learning and practicing additional problem-solving strategies in the context of interview questions.\n\nThe remainder of class will be dedicated to project work.",
+    "startDate": "2016-10-27T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 3662,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 9,
+    "title": "Project #1 Presentations",
+    "description": "Today's session is dedicated to project presentations.\n\nStudents and groups will take turns presenting and discussing their work in front of the class.",
+    "startDate": "2016-10-27T00:00:00.000Z",
+    "intervalId": 1
+  }, {
+    "id": 2342,
+    "type": "Technology",
+    "typeId": 4,
+    "ordinal": 9,
+    "title": "Interview Questions and Project Work",
+    "description": "In today's session, students will \"warm up\" by learning and practicing additional problem-solving strategies in the context of interview questions.\n\nThe remainder of class will be dedicated to project work.",
+    "startDate": "2016-10-27T00:00:00.000Z",
+    "intervalId": 1
+  }]
+}]

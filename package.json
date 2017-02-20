@@ -1,0 +1,34 @@
+{
+  "name": "pwfantasy-admin",
+  "version": "0.0.1",
+  "description": "PWF Admin Panel",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp & node src/server/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Wragg <seanwragg@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "~1.6.0",
+    "angular-cookies": "~1.6.0",
+    "angular-ui-router": "~0.3.2",
+    "compression": "~1.6.2",
+    "express": "~4.14.0",
+    "express-http-proxy": "~0.10.1",
+    "morgan": "~1.7.0"
+  },
+  "devDependencies": {
+    "del": "~2.2.2",
+    "gulp": "~3.9.1",
+    "gulp-angular-order": "~1.0.1",
+    "gulp-angular-templatecache": "~2.0.0",
+    "gulp-changed": "~1.3.2",
+    "gulp-clean": "~0.3.2",
+    "gulp-inject": "~4.1.0",
+    "gulp-jscs": "~4.0.0",
+    "gulp-jshint": "~2.0.4",
+    "gulp-load-plugins": "~1.4.0",
+    "gulp-sass": "~3.0.0"
+  }
+}

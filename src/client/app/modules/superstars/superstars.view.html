@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-3">
+    <div class="well well-sm">
+      <div class="input-group">
+        <input type="text" class="form-control" ng-model="superstarsVm.search" placeholder="Chris Jerhico">
+        <span class="input-group-btn">
+          <button ui-sref="superstars.search({term: superstarsVm.search})" class="btn btn-default" type="button">Search!</button>
+        </span>
+      </div><!-- /input-group -->
+      <br />
+       <button ui-sref="superstars.editor" class="btn btn-primary btn-block" type="button">Create Superstar</button>
+    </div>
+  </div>
+
+  <div class="col-sm-9" ui-view>
+    Superstars 
+  </div>
+</div>
+

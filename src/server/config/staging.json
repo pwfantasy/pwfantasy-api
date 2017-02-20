@@ -1,0 +1,11 @@
+{
+    "log": {
+        "level": "combined"
+    },
+
+    "webapi": {
+        "stubs": false
+    },
+
+    "compression": true
+}

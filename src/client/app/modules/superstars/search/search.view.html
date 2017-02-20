@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h2>Search Results <small>("{{searchVm.term}}")</small></h2>
+
+    <ul>
+      <li ng-repeat="talent in searchVm.results">
+        <a href="#" ui-sref="superstars.editor({slug: talent.slug})">{{talent.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
