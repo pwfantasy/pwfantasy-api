@@ -25,6 +25,7 @@ fn not_found() -> JSON<Value> {
 fn rocket() -> Rocket {
     let mut opts = mysql::OptsBuilder::new();
     opts.db_name(Some("pwfantasy"));
+    opts.prefer_socket(false); // only set to "false" when on windows
     opts.user(Some(env!("PWFDB_USER")));
     opts.pass(Some(env!("PWFDB_PASS")));
 
@@ -32,7 +33,11 @@ fn rocket() -> Rocket {
 
     rocket::ignite()
         .manage(pool)
-        .mount("/superstar", routes![superstar::create, superstar::retrieve])
+        .mount("/superstar", routes![
+            superstar::create,
+            superstar::retrieve,
+            superstar::search,
+        ])
         .catch(errors![not_found])
 }
 
