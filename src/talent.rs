@@ -6,40 +6,69 @@ use mysql;
 pub struct Talent {
     id: i32,
     name: String,
-    short_name: Option<String>,
-    slug: Option<String>,
+    slug: String,
     tier: i32,
-    active: Option<i32>,
+    active: i32,
     faction: Option<i32>,
     championship: Option<i32>,
-    promotion: i32
+    show: Option<i32>
 }
 
-pub fn retrieve_by_slug(pool: State<mysql::Pool>, slug: String) -> Vec<Talent> {
+pub fn retrieve_by_slug(pool: State<mysql::Pool>, slug: String) -> Option<Talent> {
     let params = params!{
         "slug" => slug
     };
 
-    // Let's select payments from database
-    let talents: Vec<Talent> =
-    pool.prep_exec("SELECT superstarId, superstarName, tierId, promotionId, championshipId FROM superstars WHERE superstarSlug = :slug", params)
-    .map(|result| {
-        result.map(|x| x.unwrap()).map(|row| {
-            let (superstarId, superstarName, tierId, promotionId, championshipId) = mysql::from_row(row);
+    let talent: Option<Talent> =
+        pool.prep_exec("SELECT id, `name`, slug, tier, active, faction, championship, `show` FROM talent WHERE slug = :slug", params)
+        .map(|mut result| {
+            let row = result.next();
 
-            Talent {
-                id: superstarId,
-                name: superstarName,
-                tier: tierId,
-                promotion: promotionId,
-                active: None,
-                faction: None,
-                championship: championshipId,
-                short_name: None,
-                slug: None,
+            if row.is_none() {
+                None
+            } else {
+                let row = row.unwrap().unwrap();
+                let (id, name, slug, tier, active, faction, championship, show) = mysql::from_row(row);
+
+                Some(Talent {
+                    id: id,
+                    name: name,
+                    slug: slug,
+                    tier: tier,
+                    active: active,
+                    faction: faction,
+                    championship: championship,
+                    show: show
+                })
             }
-        }).collect() // Collect payments so now `QueryResult` is mapped to `Vec<Payment>`
-    }).unwrap(); // Unwrap `Vec<Payment>`
+        }).unwrap();
+
+    talent
+}
+
+pub fn search_by_term(pool: State<mysql::Pool>, term: String) -> Vec<Talent> {
+    let params = params!{
+        "term" => term
+    };
+
+    let talents: Vec<Talent> =
+        pool.prep_exec("SELECT id, `name`, slug, tier, active, faction, championship, `show` FROM talent WHERE name LIKE CONCAT('%', :term, '%')", params)
+        .map(|result| {
+            result.map(|x| x.unwrap()).map(|row| {
+                let (id, name, slug, tier, active, faction, championship, show) = mysql::from_row(row);
+
+                Talent {
+                    id: id,
+                    name: name,
+                    slug: slug,
+                    tier: tier,
+                    active: active,
+                    faction: faction,
+                    championship: championship,
+                    show: show
+                }
+            }).collect()
+        }).unwrap();
 
     talents
 }
