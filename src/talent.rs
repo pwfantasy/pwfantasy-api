@@ -11,7 +11,9 @@ pub struct Talent {
     active: i32,
     faction: Option<i32>,
     championship: Option<i32>,
-    show: Option<i32>
+    show: Option<i32>,
+    image: Option<String>,
+    bio: Option<String>
 }
 
 pub fn retrieve_by_slug(pool: State<mysql::Pool>, slug: String) -> Option<Talent> {
@@ -20,7 +22,7 @@ pub fn retrieve_by_slug(pool: State<mysql::Pool>, slug: String) -> Option<Talent
     };
 
     let talent: Option<Talent> =
-        pool.prep_exec("SELECT id, `name`, slug, tier, active, faction, championship, `show` FROM talent WHERE slug = :slug", params)
+        pool.prep_exec("SELECT id, `name`, slug, tier, active, faction, championship, `show`, image, bio FROM talent WHERE slug = :slug", params)
         .map(|mut result| {
             let row = result.next();
 
@@ -42,7 +44,7 @@ pub fn search_by_term(pool: State<mysql::Pool>, term: String) -> Vec<Talent> {
     };
 
     let talents: Vec<Talent> =
-        pool.prep_exec("SELECT id, `name`, slug, tier, active, faction, championship, `show` FROM talent WHERE name LIKE CONCAT('%', :term, '%')", params)
+        pool.prep_exec("SELECT id, `name`, slug, tier, active, faction, championship, `show`, image, bio FROM talent WHERE name LIKE CONCAT('%', :term, '%')", params)
         .map(|result| {
             result.map(|x| x.unwrap()).map(|row| {
                 let talent: Talent = row_to_talent(row);
@@ -54,7 +56,7 @@ pub fn search_by_term(pool: State<mysql::Pool>, term: String) -> Vec<Talent> {
 }
 
 fn row_to_talent(row: mysql::Row) -> Talent {
-    let (id, name, slug, tier, active, faction, championship, show) = mysql::from_row(row);
+    let (id, name, slug, tier, active, faction, championship, show, image, bio) = mysql::from_row(row);
 
     Talent {
         id: id,
@@ -64,6 +66,8 @@ fn row_to_talent(row: mysql::Row) -> Talent {
         active: active,
         faction: faction,
         championship: championship,
-        show: show
+        show: show,
+        image: image,
+        bio: bio
     }
 }
