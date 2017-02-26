@@ -28,18 +28,8 @@ pub fn retrieve_by_slug(pool: State<mysql::Pool>, slug: String) -> Option<Talent
                 None
             } else {
                 let row = row.unwrap().unwrap();
-                let (id, name, slug, tier, active, faction, championship, show) = mysql::from_row(row);
-
-                Some(Talent {
-                    id: id,
-                    name: name,
-                    slug: slug,
-                    tier: tier,
-                    active: active,
-                    faction: faction,
-                    championship: championship,
-                    show: show
-                })
+                let talent: Talent = row_to_talent(row);
+                Some(talent)
             }
         }).unwrap();
 
@@ -55,20 +45,25 @@ pub fn search_by_term(pool: State<mysql::Pool>, term: String) -> Vec<Talent> {
         pool.prep_exec("SELECT id, `name`, slug, tier, active, faction, championship, `show` FROM talent WHERE name LIKE CONCAT('%', :term, '%')", params)
         .map(|result| {
             result.map(|x| x.unwrap()).map(|row| {
-                let (id, name, slug, tier, active, faction, championship, show) = mysql::from_row(row);
-
-                Talent {
-                    id: id,
-                    name: name,
-                    slug: slug,
-                    tier: tier,
-                    active: active,
-                    faction: faction,
-                    championship: championship,
-                    show: show
-                }
+                let talent: Talent = row_to_talent(row);
+                talent
             }).collect()
         }).unwrap();
 
     talents
+}
+
+fn row_to_talent(row: mysql::Row) -> Talent {
+    let (id, name, slug, tier, active, faction, championship, show) = mysql::from_row(row);
+
+    Talent {
+        id: id,
+        name: name,
+        slug: slug,
+        tier: tier,
+        active: active,
+        faction: faction,
+        championship: championship,
+        show: show
+    }
 }
