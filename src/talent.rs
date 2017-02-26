@@ -44,7 +44,7 @@ pub fn search_by_term(pool: State<mysql::Pool>, term: String) -> Vec<Talent> {
     };
 
     let talents: Vec<Talent> =
-        pool.prep_exec("SELECT id, `name`, slug, tier, active, faction, championship, `show`, image, bio FROM talent WHERE name LIKE CONCAT('%', :term, '%')", params)
+        pool.prep_exec("SELECT id, `name`, slug, tier, active, faction, championship, `show`, null as image, null as bio FROM talent WHERE name LIKE CONCAT('%', :term, '%') OR slug LIKE CONCAT('%', :term, '%')", params)
         .map(|result| {
             result.map(|x| x.unwrap()).map(|row| {
                 let talent: Talent = row_to_talent(row);
