@@ -1,6 +1,7 @@
 
 use rocket::{State};
 use mysql;
+use mysql::Error::DriverError;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Talent {
@@ -53,6 +54,57 @@ pub fn search_by_term(pool: State<mysql::Pool>, term: String) -> Vec<Talent> {
         }).unwrap();
 
     talents
+}
+
+pub fn upsert_superstar(pool: State<mysql::Pool>, talent: Talent) {
+    let params = params!{
+        "id" => talent.id,
+        "name" => talent.name,
+        "slug" => talent.slug,
+        "tier" => talent.tier,
+        "active" => talent.active,
+        "faction" => talent.faction,
+        "championship" => talent.championship,
+        "show" => talent.show,
+        "image" => talent.image,
+        "bio" => talent.bio
+    };
+    
+    let query = "
+        INSERT INTO talent (id, `name`, slug, tier, active, faction, championship, `show`, image, bio) 
+        VALUES (:id, :name, :slug, :tier, :active, :faction, :championship, :show, :image, :bio)
+        ON DUPLICATE KEY UPDATE 
+            id = VALUES(id),
+            `name` = VALUES(`name`),
+            slug = VALUES(slug),
+            tier = VALUES(tier),
+            active = VALUES(active),
+            faction = VALUES(faction),
+            championship = VALUES(championship),
+            `show` = VALUES(`show`),
+            image = VALUES(image),
+            bio = VALUES(bio)";
+
+    pool.prep_exec(query, params);
+
+    // let query = "
+    //     INSERT INTO talent SET ?
+    //     ON DUPLICATE KEY UPDATE 
+    //         id = VALUES(id),
+    //         `name` = VALUES(`name`),
+    //         slug = VALUES(slug),
+    //         tier = VALUES(tier),
+    //         active = VALUES(active),
+    //         faction = VALUES(faction),
+    //         championship = VALUES(championship),
+    //         `show` = VALUES(`show`),
+    //         image = VALUES(image),
+    //         bio = VALUES(bio)";
+
+    // let mut stmt = pool.prepare(query).unwrap();
+    // let result = stmt.execute(params).unwrap();
+
+    // println!("{:?}", result);
 }
 
 fn row_to_talent(row: mysql::Row) -> Talent {

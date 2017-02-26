@@ -10,6 +10,8 @@ use talent;
 #[put("/<slug>", format = "application/json", data = "<superstar>")]
 #[allow(unused_variables)]
 pub fn create(pool: State<mysql::Pool>, slug: String, superstar: JSON<talent::Talent>) -> JSON<Value> {
+    talent::upsert_superstar(pool, superstar.into_inner());
+
     // need to require admin privledges
     JSON(json!({ "status": "ok" }))
 }
