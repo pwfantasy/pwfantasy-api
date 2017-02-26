@@ -4,7 +4,7 @@ use mysql;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Talent {
-    id: i32,
+    id: Option<i32>,
     name: String,
     slug: String,
     tier: i32,
