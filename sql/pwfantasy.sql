@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-02-20 00:13:38
+Date: 2017-02-26 07:44:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -163,8 +163,8 @@ CREATE TABLE `shows` (
 -- ----------------------------
 INSERT INTO `shows` VALUES ('1', 'Raw', '1', null);
 INSERT INTO `shows` VALUES ('2', 'Smackdown LIVE', '1', null);
-INSERT INTO `shows` VALUES ('3', 'NXT', '1', null);
-INSERT INTO `shows` VALUES ('4', '205 LIVE', '1', null);
+INSERT INTO `shows` VALUES ('3', 'WWE NXT', '1', null);
+INSERT INTO `shows` VALUES ('4', 'WWE 205 LIVE', '1', null);
 INSERT INTO `shows` VALUES ('5', 'Impact Wrestling', '2', null);
 
 -- ----------------------------
@@ -183,12 +183,11 @@ CREATE TABLE `talent` (
   `image` varchar(255) DEFAULT NULL,
   `bio` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of talent
 -- ----------------------------
-INSERT INTO `talent` VALUES ('1', 'The Rock', 'therock', '1', '1', null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for `users`
