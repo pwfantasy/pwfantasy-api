@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-02-26 15:30:43
+Date: 2017-02-28 18:45:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -182,7 +182,8 @@ CREATE TABLE `talent` (
   `show` int(11) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `bio` text,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `talent_slug` (`slug`)
 ) ENGINE=InnoDB AUTO_INCREMENT=478 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
