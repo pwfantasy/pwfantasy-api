@@ -1,8 +1,7 @@
 extern crate rocket;
 
 use rocket_contrib::{JSON, Value};
-use rocket::{State, Request, Route, Data, Catcher, Error};
-use rocket::http::Status;
+use rocket::{State};
 
 use mysql;
 use talent;

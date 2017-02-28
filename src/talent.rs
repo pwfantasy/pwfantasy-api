@@ -1,7 +1,6 @@
 
 use rocket::{State};
 use mysql;
-use mysql::Error::DriverError;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Talent {
