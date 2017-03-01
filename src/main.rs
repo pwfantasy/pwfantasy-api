@@ -34,7 +34,7 @@ fn rocket() -> Rocket {
     rocket::ignite()
         .manage(pool)
         .mount("/superstar", routes![
-            superstar::create,
+            superstar::upsert,
             superstar::retrieve,
             superstar::search,
         ])

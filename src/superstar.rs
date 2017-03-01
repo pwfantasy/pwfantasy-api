@@ -8,11 +8,20 @@ use talent;
 
 #[put("/<slug>", format = "application/json", data = "<superstar>")]
 #[allow(unused_variables)]
-pub fn create(pool: State<mysql::Pool>, slug: String, superstar: JSON<talent::Talent>) -> JSON<Value> {
-    talent::upsert_superstar(pool, superstar.into_inner());
+pub fn upsert(pool: State<mysql::Pool>, slug: String, superstar: JSON<talent::Talent>) -> JSON<Value> {
+    let upsert = talent::upsert_superstar(pool, superstar.into_inner());
 
-    // need to require admin privledges
-    JSON(json!({ "status": "ok" }))
+    if upsert.is_ok() {
+        return JSON(json!({
+            "status": "ok",
+            "message": upsert.unwrap()
+        }))
+    } else {
+        return JSON(json!({
+            "status": "error",
+            "message": upsert.unwrap_err()
+        }))
+    }
 }
 
 #[get("/<slug>", format = "application/json")]

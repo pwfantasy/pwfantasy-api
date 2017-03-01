@@ -1,6 +1,7 @@
 
 use rocket::{State};
 use mysql;
+use std::error::Error;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Talent {
@@ -55,11 +56,11 @@ pub fn search_by_term(pool: State<mysql::Pool>, term: String) -> Vec<Talent> {
     talents
 }
 
-pub fn upsert_superstar(pool: State<mysql::Pool>, talent: Talent) {
+pub fn upsert_superstar(pool: State<mysql::Pool>, talent: Talent) -> Result<String, String> {
     let params = params!{
         "id" => talent.id,
         "name" => talent.name,
-        "slug" => talent.slug,
+        "slug" => &talent.slug,
         "tier" => talent.tier,
         "active" => talent.active,
         "faction" => talent.faction,
@@ -73,7 +74,6 @@ pub fn upsert_superstar(pool: State<mysql::Pool>, talent: Talent) {
         INSERT INTO talent (id, `name`, slug, tier, active, faction, championship, `show`, image, bio) 
         VALUES (:id, :name, :slug, :tier, :active, :faction, :championship, :show, :image, :bio)
         ON DUPLICATE KEY UPDATE 
-            id = VALUES(id),
             `name` = VALUES(`name`),
             slug = VALUES(slug),
             tier = VALUES(tier),
@@ -84,7 +84,25 @@ pub fn upsert_superstar(pool: State<mysql::Pool>, talent: Talent) {
             image = VALUES(image),
             bio = VALUES(bio)";
 
-    pool.prep_exec(query, params);
+    let result = pool.prep_exec(query, params);
+
+    match result.is_ok() {
+        true => Ok(match result.unwrap().affected_rows() {
+            0 => format!("{} record is the same", talent.slug),
+            1 => format!("{} record created", talent.slug),
+            2 => format!("{} record was updated", talent.slug),
+            _ => format!("no clue what the hell happened")
+        }),
+        false => Err(format!("{}", result.unwrap_err().cause().unwrap()))
+    }
+    
+    /*
+        With ON DUPLICATE KEY UPDATE, the affected-rows value per row:
+        1 if the row is inserted as a new row
+        2 if an existing row is updated
+        0 if an existing row is set to its current values.
+    */
+    // result.affected_rows();
 
     // let query = "
     //     INSERT INTO talent SET ?
